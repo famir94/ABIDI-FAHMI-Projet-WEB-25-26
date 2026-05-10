@@ -44,13 +44,12 @@ body {
    EN-TÊTE ET NAVIGATION
    ========================================== */
 header {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 1rem 0;
+    background-color: #004a99; /* Le bleu officiel EFREI */
+    padding: 10px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: var(--shadow);
 }
 
 .header-container {
@@ -83,9 +82,18 @@ header {
     }
 }
 
+.logo-main {
+    height: 65px;
+    background-color: white; 
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .logo-section h1 {
     font-size: 1.8rem;
     font-weight: 700;
+    color: #ffffff !important;
+    margin-left: 15px;
 }
 
 .main-nav ul {
@@ -94,19 +102,23 @@ header {
     gap: 2rem;
 }
 
-.main-nav a {
-    color: var(--white);
-    text-decoration: none;
+.main-nav ul li a {
+    color: #ffffff !important;
     font-weight: 500;
+    text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
+.main-nav a:hover {
     background-color: var(--secondary-color);
-    color: var(--white);
+}
+
+.main-nav ul li a.active {
+    border-bottom: 2px solid #ffffff;
+    background-color: var(--secondary-color);
 }
 
 /* ==========================================
@@ -797,6 +809,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    align-items: center;
 }
 
 .contact-info-card {
@@ -805,6 +818,9 @@ header {
     padding: 1.5rem;
     border-radius: 8px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
 }
 
 .contact-info-card:hover {
@@ -839,6 +855,7 @@ header {
 
 .social-links {
     display: flex;
+    justify-content: center;
     gap: 1rem;
     margin-top: 1rem;
 }
@@ -847,8 +864,8 @@ header {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     background-color: var(--accent-color);
     color: var(--white);
     border-radius: 50%;
@@ -860,6 +877,11 @@ header {
 .social-link:hover {
     transform: scale(1.1) rotate(5deg);
     box-shadow: var(--shadow-lg);
+    background-color: var(--primary-color);
+}
+
+.social-link svg {
+    fill: currentColor;
 }
 
 .location-section {
@@ -1243,6 +1265,7 @@ header {
     background-color: var(--white);
     color: var(--primary-color);
 }
+
 footer {
     background-color: var(--primary-color);
     color: var(--white);
@@ -1724,42 +1747,4 @@ footer {
 .author-info small {
     color: var(--light-text);
     font-size: 0.85rem;
-}
-/* --- REMETTRE LE HEADER EN BLEU --- */
-header {
-    background-color: #004a99; /* Le bleu officiel EFREI */
-    padding: 10px 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-/* On force le titre en blanc pour qu'il soit lisible sur le bleu */
-.logo-section h1 {
-    color: #ffffff !important;
-    margin-left: 15px;
-}
-
-/* On met les liens du menu en blanc aussi */
-.main-nav ul li a {
-    color: #ffffff !important;
-    font-weight: 500;
-}
-
-/* La barre sous le lien actif passe en blanc pour bien se voir */
-.main-nav ul li a.active {
-    border-bottom: 2px solid #ffffff;
-}
-
-/* Petit ajustement pour le logo sur fond bleu */
-.logo-main {
-    height: 65px;
-    background-color: white; /* Optionnel : ajoute un petit fond blanc arrondi derrière le logo si besoin */
-    padding: 5px;
-    border-radius: 5px;
-}
-/* --- CORRECTION POUR GARDER LE MENU SUR UNE LIGNE --- */
-.main-nav ul li a {
-    white-space: nowrap;
 }
