@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - EFREI Informatique</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- En-tête -->
+    <header>
+        <div class="header-container">
+            <div class="logo-section">
+                <img src="assets/images/logo-efrei.svg" alt="Logo EFREI" class="logo">
+                <h1>EFREI - Département d'Informatique</h1>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="courses.html">Cours & Formations</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="space.html">Espace Membre</a></li>
+                    <li><a href="about.html">À Propos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Section Titre -->
+        <section class="page-header">
+            <div class="container">
+                <h1>Contactez-Nous</h1>
+                <p>Nous serions ravis de vous aider et de répondre à toutes vos questions</p>
+            </div>
+        </section>
+
+        <!-- Section Contact Principale -->
+        <section class="contact-main">
+            <div class="container">
+                <div class="contact-wrapper">
+                    <!-- Formulaire de Contact -->
+                    <div class="contact-form-section">
+                        <h2>Formulaire de Contact</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Nom Complet *</label>
+                                <input type="text" id="name" name="name" required placeholder="Jean Dupont">
+                                <small class="error-msg" id="nameError"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Adresse E-mail *</label>
+                                <input type="email" id="email" name="email" required placeholder="jean@example.com">
+                                <small class="error-msg" id="emailError"></small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Numéro de Téléphone</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+33 1 XX XX XX XX">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Sujet *</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">-- Sélectionnez un sujet --</option>
+                                    <option value="admission">Admission & Inscription</option>
+                                    <option value="formation">Informations sur les Formations</option>
+                                    <option value="emploi">Offre d'Emploi</option>
+                                    <option value="partenariat">Partenariat</option>
+                                    <option value="autre">Autre</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Message *</label>
+                                <textarea id="message" name="message" required placeholder="Votre message..." rows="6"></textarea>
+                                <small class="error-msg" id="messageError"></small>
+                            </div>
+
+                            <div class="form-group checkbox">
+                                <input type="checkbox" id="agree" name="agree" required>
+                                <label for="agree">J'accepte les conditions d'utilisation et la politique de confidentialité</label>
+                            </div>
+
+                            <button type="submit" class="btn-primary">Envoyer le Message</button>
+                            <div class="form-message" id="formMessage"></div>
+                        </form>
+                    </div>
+
+                    <!-- Informations de Contact -->
+                    <div class="contact-info-section">
+                        <h2>Nos Coordonnées</h2>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon">📍</div>
+                            <h3>Adresse</h3>
+                            <p>EFREI Paris</p>
+                            <p>30-32 Avenue de la République</p>
+                            <p>94800 Villejuif, France</p>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon">📞</div>
+                            <h3>Téléphone</h3>
+                            <p><strong>Secrétariat :</strong></p>
+                            <p>+33 (0)1 46 78 75 00</p>
+                            <p><strong>Admission :</strong></p>
+                            <p>+33 (0)1 46 78 71 00</p>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon">📧</div>
+                            <h3>E-mail</h3>
+                            <p><strong>Général :</strong></p>
+                            <p><a href="mailto:info@efrei.fr">info@efrei.fr</a></p>
+                            <p><strong>Admission :</strong></p>
+                            <p><a href="mailto:admission@efrei.fr">admission@efrei.fr</a></p>
+                        </div>
+
+                        <div class="contact-info-card">
+                            <div class="contact-icon">⏰</div>
+                            <h3>Horaires</h3>
+                            <p><strong>Lundi - Vendredi :</strong></p>
+                            <p>9h00 - 17h30</p>
+                            <p><strong>Samedi - Dimanche :</strong></p>
+                            <p>Fermé</p>
+                        </div>
+
+                        <h2 style="margin-top: 2rem;">Réseaux Sociaux</h2>
+                        <div class="social-links">
+                            <a href="#" class="social-link" title="Facebook">f</a>
+                            <a href="#" class="social-link" title="Twitter">𝕏</a>
+                            <a href="#" class="social-link" title="LinkedIn">in</a>
+                            <a href="#" class="social-link" title="Instagram">📷</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Localisation -->
+        <section class="location-section">
+            <div class="container">
+                <h2>Localisation</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2627.5976395574406!2d2.365929!3d48.7858!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67a1a1a1a1a1b%3A0x1a1a1a1a1a1a1a1a!2sEFREI!5e0!3m2!1sfr!2sfr!4v1234567890" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section FAQ -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Questions Fréquemment Posées</h2>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>Quel est le délai de traitement des demandes ?</h3>
+                        <p>Nous traitons généralement vos demandes dans un délai de 2 à 3 jours ouvrables. Vous recevrez une réponse par email.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Comment postuler à EFREI ?</h3>
+                        <p>Vous pouvez postuler en ligne via notre portail d'admission. Consultez la section "Admission" ou contactez directement notre service.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Y a-t-il des portes ouvertes ?</h3>
+                        <p>Oui ! Les portes ouvertes se déroulent généralement en février et mars. Consultez notre calendrier pour les dates exactes.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>Offrez-vous des bourses ?</h3>
+                        <p>EFREI propose plusieurs types de bourses. Pour plus d'informations, contactez notre service d'admission.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <p>&copy; 2026 Département d'Informatique EFREI. Tous droits réservés.</p>
+            </div>
+            <nav class="footer-nav">
+                <a href="about.html">À Propos</a>
+                <a href="courses.html">Formations</a>
+                <a href="contact.html">Contact</a>
+                <a href="index.html">Accueil</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/contact.js"></script>
+</body>
+</html>
