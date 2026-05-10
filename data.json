@@ -1,0 +1,87 @@
+{
+  "courses": [
+    {
+      "title": "Informatique Générale",
+      "description": "Bases de la programmation et des algorithmes",
+      "duration": "2 ans",
+      "level": "Débutant"
+    },
+    {
+      "title": "Développement Web",
+      "description": "HTML, CSS, JavaScript et frameworks modernes",
+      "duration": "1 an",
+      "level": "Intermédiaire"
+    },
+    {
+      "title": "Intelligence Artificielle",
+      "description": "Machine learning et deep learning",
+      "duration": "2 ans",
+      "level": "Avancé"
+    },
+    {
+      "title": "Cybersécurité",
+      "description": "Protection des systèmes et données",
+      "duration": "1 an",
+      "level": "Intermédiaire"
+    },
+    {
+      "title": "Data Science",
+      "description": "Analyse de données et visualisation",
+      "duration": "1 an",
+      "level": "Intermédiaire"
+    },
+    {
+      "title": "Cloud Computing",
+      "description": "Services cloud et architecture distribuée",
+      "duration": "1 an",
+      "level": "Avancé"
+    }
+  ],
+  "team": [
+    {
+      "name": "Jean Dupont",
+      "role": "Directeur du Département",
+      "photo": "https://via.placeholder.com/300x300?text=Jean+Dupont",
+      "bio": "Expert en informatique avec 20 ans d'expérience"
+    },
+    {
+      "name": "Marie Martin",
+      "role": "Responsable Pédagogique",
+      "photo": "https://via.placeholder.com/300x300?text=Marie+Martin",
+      "bio": "Spécialiste en formation et innovation pédagogique"
+    },
+    {
+      "name": "Pierre Durand",
+      "role": "Chef de Projet",
+      "photo": "https://via.placeholder.com/300x300?text=Pierre+Durand",
+      "bio": "Développeur full-stack et mentor technique"
+    }
+  ],
+  "gallery": [
+    {
+      "url": "https://via.placeholder.com/800x600?text=Campus+EFREI",
+      "caption": "Vue du campus EFREI",
+      "category": "campus"
+    },
+    {
+      "url": "https://via.placeholder.com/800x600?text=Événement+Tech",
+      "caption": "Conférence sur les nouvelles technologies",
+      "category": "events"
+    },
+    {
+      "url": "https://via.placeholder.com/800x600?text=Étudiants+en+Cours",
+      "caption": "Session de cours interactive",
+      "category": "students"
+    },
+    {
+      "url": "https://via.placeholder.com/800x600?text=Laboratoire+Informatique",
+      "caption": "Équipements du laboratoire",
+      "category": "campus"
+    },
+    {
+      "url": "https://via.placeholder.com/800x600?text=Projet+Groupe",
+      "caption": "Travail en équipe sur un projet",
+      "category": "students"
+    }
+  ]
+}

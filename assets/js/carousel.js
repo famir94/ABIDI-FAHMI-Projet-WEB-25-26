@@ -70,3 +70,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+/* ==========================================
+   PHOTO CAROUSEL FUNCTIONALITY
+   ========================================== */
+
+let currentPhotoSlide = 0;
+const photoSlides = document.querySelectorAll('.photo-slide');
+const totalPhotoSlides = photoSlides.length;
+
+/**
+ * Change de slide dans le carrousel photo
+ * @param {number} direction - Direction du changement (-1 pour précédent, 1 pour suivant)
+ */
+function changePhotoSlide(direction) {
+    // Retire la classe active du slide courant
+    photoSlides[currentPhotoSlide].classList.remove('active');
+    
+    // Calcule le nouvel index
+    currentPhotoSlide = (currentPhotoSlide + direction + totalPhotoSlides) % totalPhotoSlides;
+    
+    // Ajoute la classe active au nouveau slide
+    photoSlides[currentPhotoSlide].classList.add('active');
+}
+
+/**
+ * Initialisation du carrousel photo
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialiser le carousel photo avec le premier slide actif
+    if (photoSlides.length > 0) {
+        photoSlides[0].classList.add('active');
+    }
+});

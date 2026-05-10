@@ -201,6 +201,77 @@ header {
     right: 20px;
 }
 
+/* Photo Carousel */
+.photo-carousel-section {
+    padding: 4rem 0;
+    background-color: var(--light-bg);
+}
+
+.photo-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+}
+
+.photo-slide {
+    display: none;
+    width: 100%;
+    position: relative;
+}
+
+.photo-slide.active {
+    display: block;
+}
+
+.photo-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.photo-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: var(--white);
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.photo-carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    color: var(--primary-color);
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 3;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.photo-carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.photo-carousel-btn.prev {
+    left: 10px;
+}
+
+.photo-carousel-btn.next {
+    right: 10px;
+}
+
 /* ==========================================
    SECTIONS DE CONTENU
    ========================================== */
