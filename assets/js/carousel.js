@@ -4,17 +4,21 @@
 
 let currentSlide = 0;
 const slides = document.querySelectorAll('.carousel-slide');
-const totalSlides = slides.length;
 
 /**
  * Change de slide dans le carrousel
  * @param {number} direction - Direction du changement (-1 pour précédent, 1 pour suivant)
  */
 function changeSlide(direction) {
+    // Sécurité : si on est sur une page sans carrousel, on arrête la fonction
+    if (slides.length === 0) return; 
+
+    const totalSlides = slides.length;
+    
     // Retire la classe active du slide courant
     slides[currentSlide].classList.remove('active');
     
-    // Calcule le nouvel index
+    // Calcule le nouvel index (permet de boucler de la fin vers le début et inversement)
     currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
     
     // Ajoute la classe active au nouveau slide
@@ -22,22 +26,22 @@ function changeSlide(direction) {
 }
 
 /**
- * Change automatiquement de slide toutes les 5 secondes
- */
-setInterval(() => {
-    changeSlide(1);
-}, 5000);
-
-/**
- * Gestion des événements au chargement du DOM
+ * Gestion des événements au chargement de la page
  */
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialiser le carousel avec le premier slide actif
+    
+    // Initialiser le carousel UNIQUEMENT s'il y a des slides sur la page
     if (slides.length > 0) {
+        // Met le premier slide en actif
         slides[0].classList.add('active');
+        
+        // Change automatiquement de slide toutes les 5 secondes
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000);
     }
     
-    // Ajouter la classe active au lien de navigation courant
+    // Mettre à jour le lien de navigation actif dans le menu
     updateActiveNavLink();
 });
 
@@ -59,7 +63,7 @@ function updateActiveNavLink() {
 }
 
 /**
- * Smooth scroll pour les ancres
+ * Smooth scroll pour les ancres (liens internes)
  */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -69,37 +73,4 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             target.scrollIntoView({ behavior: 'smooth' });
         }
     });
-});
-
-/* ==========================================
-   PHOTO CAROUSEL FUNCTIONALITY
-   ========================================== */
-
-let currentPhotoSlide = 0;
-const photoSlides = document.querySelectorAll('.photo-slide');
-const totalPhotoSlides = photoSlides.length;
-
-/**
- * Change de slide dans le carrousel photo
- * @param {number} direction - Direction du changement (-1 pour précédent, 1 pour suivant)
- */
-function changePhotoSlide(direction) {
-    // Retire la classe active du slide courant
-    photoSlides[currentPhotoSlide].classList.remove('active');
-    
-    // Calcule le nouvel index
-    currentPhotoSlide = (currentPhotoSlide + direction + totalPhotoSlides) % totalPhotoSlides;
-    
-    // Ajoute la classe active au nouveau slide
-    photoSlides[currentPhotoSlide].classList.add('active');
-}
-
-/**
- * Initialisation du carrousel photo
- */
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialiser le carousel photo avec le premier slide actif
-    if (photoSlides.length > 0) {
-        photoSlides[0].classList.add('active');
-    }
 });

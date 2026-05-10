@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Département d'informatique - EFREI</title>
+    <link rel="icon" type="image/png" href="assets/images/logoEFREI.png">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
         <div class="header-container">
             <div class="logo-section">
-                <img src="assets/images/logo-efrei.svg" alt="Logo EFREI" class="logo">
+                <img src="assets/images/logoEFREI.png" alt="Logo EFREI" class="logo-main">
                 <h1>EFREI - Département d'informatique</h1>
             </div>
             <nav class="main-nav">
@@ -27,48 +28,33 @@
     <main>
         <section class="hero-section">
             <div class="carousel">
-                <div class="carousel-slide active" style="background-image: url('https://via.placeholder.com/1200x400?text=Bienvenue+à+EFREI');">
+                <div class="carousel-slide active" style="background-image: url('assets/images/car1.jpg');">
                     <div class="slide-content">
                         <h2>Bienvenue au département d'informatique</h2>
-                        <p>Formez-vous aux technologies de demain</p>
+                        <p>Formez-vous aux technologies de demain dans un cadre moderne</p>
                     </div>
                 </div>
-                <div class="carousel-slide" style="background-image: url('https://via.placeholder.com/1200x400?text=Innovation+Technologique');">
+                <div class="carousel-slide" style="background-image: url('assets/images/car2.jpg');">
                     <div class="slide-content">
                         <h2>Innovation & excellence</h2>
-                        <p>Découvrez nos formations de pointe</p>
+                        <p>Découvrez nos espaces de travail et nos laboratoires de pointe</p>
                     </div>
                 </div>
-                <div class="carousel-slide" style="background-image: url('https://via.placeholder.com/1200x400?text=Carrière+Professionnelle');">
+                <div class="carousel-slide" style="background-image: url('assets/images/car3.jpg');">
                     <div class="slide-content">
-                        <h2>Vers une carrière réussie</h2>
-                        <p>Rejoignez nos anciens étudiants en tant que leaders du secteur tech</p>
+                        <h2>Un campus verdoyant</h2>
+                        <p>Un environnement serein et propice à la réussite de vos projets</p>
                     </div>
                 </div>
+                <div class="carousel-slide" style="background-image: url('assets/images/car4.jpg');">
+                    <div class="slide-content">
+                        <h2>Vie étudiante active</h2>
+                        <p>Rejoignez une communauté dynamique et passionnée par la Tech</p>
+                    </div>
+                </div>
+
                 <button class="carousel-btn prev" onclick="changeSlide(-1)">&#10094;</button>
                 <button class="carousel-btn next" onclick="changeSlide(1)">&#10095;</button>
-            </div>
-        </section>
-
-        <section class="photo-carousel-section">
-            <div class="container">
-                <h2>Galerie photos</h2>
-                <div class="photo-carousel">
-                    <div class="photo-slide active">
-                        <img src="https://via.placeholder.com/800x600?text=Campus+EFREI" alt="Campus EFREI">
-                        <div class="photo-caption">Vue du campus EFREI</div>
-                    </div>
-                    <div class="photo-slide">
-                        <img src="https://via.placeholder.com/800x600?text=Événement+Tech" alt="Événement tech">
-                        <div class="photo-caption">Conférence sur les nouvelles technologies</div>
-                    </div>
-                    <div class="photo-slide">
-                        <img src="https://via.placeholder.com/800x600?text=Étudiants+en+Cours" alt="Étudiants en cours">
-                        <div class="photo-caption">Session de cours interactive</div>
-                    </div>
-                    <button class="photo-carousel-btn prev" onclick="changePhotoSlide(-1)">&#10094;</button>
-                    <button class="photo-carousel-btn next" onclick="changePhotoSlide(1)">&#10095;</button>
-                </div>
             </div>
         </section>
 
@@ -129,6 +115,9 @@
     <footer>
         <div class="footer-container">
             <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="assets/images/logoEFREI.png" alt="Logo EFREI" class="logo-footer">
+                </div>
                 <p>&copy; 2026 Département d'informatique EFREI. Tous droits réservés.</p>
             </div>
             <nav class="footer-nav">
