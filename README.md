@@ -34,4 +34,4 @@ Comme demandé dans les consignes, on n'a utilisé aucune bibliothèque externe 
 * **[Elias  Abidi]** 
 
 ---
-*Projet EFREI - Année 2026-2027*
+*Projet EFREI - Année 2025-2026*
